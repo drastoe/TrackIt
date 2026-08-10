@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landing Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="landing.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="landing.js" defer></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: "#0B1220",
+          navycard: "#131c33",
+          brandblue: "#2E6FF2",
+          brandgreen: "#17B978",
+        },
+        fontFamily: {
+          inter: ["Inter", "sans-serif"],
+          sora: ["Sora", "sans-serif"],
+          mono: ["IBM Plex Mono", "monospace"],
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body class="font-inter text-white antialiased">
+<div class="bg-mesh"></div>
+<div class="bg-dots"></div>
+
+<header id="site-header" class="w-full">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-10 py-6">
+    <a href="#" class="flex items-center gap-2.5">
+      <img src="Trackit1.png" alt="TrackIt Logo" class="rounded-full h-9">
+      <span class="bg-gradient-to-r from-brandblue via-brandblue to-brandgreen bg-clip-text text-transparent font-sora font-bold text-xl">TrackIt</span>
+    </a>
+    <nav class="hidden sm:flex items-center gap-10 text-sm text-slate-300 font-medium">
+      <a href="why" class="hover:text-white transition">Why TrackIt</a>
+      <a href="features" class="hover:text-white transition">Features</a>
+      <a href="who" class="hover:text-white transition">Who it's for</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="login.html" class="hidden sm:inline text-sm font-medium text-slate-300 hover:text-white transition">Log in</a>
+      <a href="tour.html" class="nav-cta btn-primary text-sm font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-brandblue to-brandgreen sm:hidden">Take a tour</a>
+    </div>
+  </div>
+</header>
+
+<main class="relative z-10">
+
+  <!-- HERO -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 sm:pt-24 pb-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <div class="fade-up">
+        <div class="inline-flex items-center gap-3 glass rounded-full px-4 py-2 mb-8">
+          <span class="text-xs font-medium text-slate-300">Built for Nigerian income earners.</span>
+        </div>
+        <h1 class="font-sora font-semibold text-5xl sm:text-7xl leading-[1.04] mb-7 tracking-tight">
+          Know where every
+          <span class="bg-gradient-to-r from-brandblue via-brandblue to-brandgreen bg-clip-text text-transparent">cash</span>
+          goes.
+        </h1>
+        <p class="text-slate-400 text-lg sm:text-xl mb-10 max-w-lg leading-relaxed">
+          Your bank app has the data. It doesn't tell you that you spent &#8358;78,000 on Eat-Out this month. TrackIt does, you log an expense daily, and it turns it to what you can actually understand in seconds.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+         
+          <a href="problem" class="btn-ghost text-center font-semibold px-7 py-4 rounded-full border border-white/15 text-slate-200">
+            See how it works
+          </a>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-slate-500">
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brandgreen"></span>No card required</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brandgreen"></span>Log in your expense</span>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="fade-up d1 relative flex justify-center lg:justify-end">
+        <div class="absolute w-[380px] h-[380px] rounded-full bg-gradient-to-br from-brandblue/30 to-brandgreen/20 blur-3xl -z-10"></div>
+        <div class="phone w-[350px] rounded-[2.5rem] p-3 bg-[#0e1626] rotate-2">
+          <div class="rounded-[2rem] overflow-hidden bg-navy">
+            <div class="flex items-center justify-between px-5 pt-5 pb-3">
+
+              <span class="font-sora font-bold text-sm bg-gradient-to-r from-brandblue to-brandgreen bg-clip-text text-transparent">TrackIt</span>
+            <svg class="h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+  <path fill-rule="evenodd" d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z" clip-rule="evenodd" />
+</svg>
+
+            </div>
+            <div class="px-5 pb-5">
+              <div class="rounded-2xl p-4 mb-4 gradient-panel">
+                <p class="text-[10px] text-slate-400 uppercase tracking-wide mb-1">Total spent &middot; July</p>
+                <p class="stamp text-2xl font-semibold mb-3">&#8358;357,000</p>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="rounded-lg p-2.5 bg-brandblue/15">
+                    <p class="text-[9px] text-slate-300 mb-0.5">Primary Income</p>
+                    <p class="text-sm font-semibold mt-1">&#8358;350,000</p>
+                    <p class="text-[10px] tracking-wider opacity-80 mt-1">&#8358;225,000 spent</p>
+                  </div>
+                  <div class="rounded-lg p-2.5 bg-brandgreen/15">
+                    <p class="text-[9px] text-slate-300 mb-0.5">Other Income</p>
+                    <p class="text-sm font-semibold mt-1">&#8358;150,000</p>
+                    <p class="text-[10px] tracking-wider opacity-80 mt-1">&#8358;132,000 spent</p>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between rounded-xl px-3.5 py-3 bg-white/5">
+                  <span class="text-xs text-slate-200">Groceries</span>
+                  <span class="stamp text-xs text-slate-300">&#8358;45,200</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl px-3.5 py-3 bg-white/5">
+                  <span class="text-xs text-slate-200">Transport</span>
+                  <span class="stamp text-xs text-slate-300">&#8358;56,500</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl px-3.5 py-3 bg-white/5">
+                  <span class="text-xs text-slate-200">Eat-out</span>
+                  <span class="stamp text-xs text-slate-300">&#8358;78,300</span>
+                </div>
+                  <div class="flex items-center justify-between rounded-xl px-3.5 py-3 bg-white/5">
+                  <span class="text-xs text-slate-200">Data / Wifi</span>
+                  <span class="stamp text-xs text-slate-300">&#8358;45,000</span>
+                </div><br>
+                <p class="text-xs text-brandgreen font-text-slate-300 px-2 py-2 rounded-xl">&#8358;132,000 of your spending came from money that wasn't your primary income.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="flex flex-col m-9">
+ <a href="onboarding/onboarding.html" class="btn-primary text-center font-semibold px-7 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen">
+            Start tracking
+          </a>
+          </div>
+  <!-- TRUST STRIP -->
+  <section class="max-w-4xl mx-auto px-6 sm:px-10 py-16 fade-up">
+    <p class="text-center text-xs uppercase tracking-[0.2em] text-slate-500 mb-6">Made for how Nigerians actually earn</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <span class="text-xs px-4 py-2 rounded-full glass text-slate-300">Salary</span>
+      <span class="text-xs px-4 py-2 rounded-full glass text-slate-300">Freelance</span>
+      <span class="text-xs px-4 py-2 rounded-full glass text-slate-300">Side hustles</span>
+      <span class="text-xs px-4 py-2 rounded-full glass text-slate-300">Small business</span>
+      <span class="text-xs px-4 py-2 rounded-full glass text-slate-300">Shared households</span>
+    </div>
+  </section>
+
+  <!-- STORY CARD -->
+  <section class="max-w-5xl mx-auto px-6 sm:px-10 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="fade-up">
+        <p class="stamp text-[11px] tracking-[0.15em] uppercase text-brandgreen/80 mb-4">Real numbers, not guesses</p>
+        <h2 class="font-sora font-bold text-4xl sm:text-5xl mb-4 leading-tight">Know it before the month ends.</h2>
+        <p class="text-slate-400 text-lg mb-6 leading-relaxed">Whether you check daily, weekly, or monthly, TrackIt breaks down exactly what's taking the biggest bite out of your spending, the moment you open the app.</p>
+      <div class="flex gap-1.5 glass rounded-full p-1 w-fit mx-auto md:mx-0">
+          <button data-period="day" class="period-btn active-period text-xs font-semibold px-4 py-1.5 rounded-full transition">Day</button>
+          <button data-period="week" class="period-btn text-xs font-semibold px-4 py-1.5 rounded-full transition">Week</button>
+          <button data-period="month" class="period-btn text-xs font-semibold px-4 py-1.5 rounded-full transition">Month</button>
+        </div>
+      </div>
+
+      <div class="fade-up d1 flex justify-center md:justify-end">
+        <div class="w-[300px] relative rounded-[1.75rem] overflow-hidden phone phone-aspect">
+      
+          <svg viewBox="0 0 300 375" class="w-full h-full" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="scene-bg" x1="0" y1="0" x2="300" y2="375" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#16264d"/>
+                <stop offset="100%" stop-color="#0f2e26"/>
+              </linearGradient>
+              <radialGradient id="scene-glow" cx="70%" cy="18%" r="55%">
+                <stop offset="0%" stop-color="#ffcf6b" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#ffcf6b" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="person-grad" x1="80" y1="120" x2="220" y2="340" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2E6FF2"/>
+                <stop offset="100%" stop-color="#17B978"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="300" height="375" fill="url(#scene-bg)"/>
+            <rect width="300" height="375" fill="url(#scene-glow)"/>
+
+            <!-- market stall awning, suggested with simple shapes -->
+            <path d="M0 78 L60 52 L140 66 L210 48 L300 76 L300 0 L0 0 Z" fill="#0d1830" opacity="0.65"/>
+            <circle cx="235" cy="62" r="5" fill="#ffcf6b" opacity="0.8"/>
+            <circle cx="260" cy="86" r="3.5" fill="#ffcf6b" opacity="0.6"/>
+            <circle cx="205" cy="95" r="3" fill="#ffcf6b" opacity="0.5"/>
+
+            <!-- person silhouette, looking at phone — kept high in frame so nothing is hidden behind the stat card below -->
+            <circle cx="150" cy="90" r="22" fill="url(#person-grad)"/>
+            <path d="M108 210 C108 152 122 122 150 122 C178 122 192 152 192 210 Z" fill="url(#person-grad)"/>
+
+            <!-- arm holding phone -->
+            <path d="M150 130 C166 134 175 146 173 160" stroke="url(#person-grad)" stroke-width="14" stroke-linecap="round" fill="none"/>
+            <rect x="160" y="154" width="24" height="42" rx="6" fill="#0B1220" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5"/>
+            <rect x="164" y="160" width="16" height="26" rx="2" fill="#17B978" opacity="0.4"/>
+
+            <!-- ground / market stall table suggestion, sits behind the card -->
+            <rect x="0" y="345" width="300" height="30" fill="#0a1224" opacity="0.7"/>
+            <circle cx="45" cy="352" r="7" fill="#ff8a3d" opacity="0.7"/>
+            <circle cx="62" cy="356" r="6" fill="#ffcf6b" opacity="0.6"/>
+            <circle cx="30" cy="358" r="5" fill="#17B978" opacity="0.5"/>
+          </svg>
+
+          <div class="absolute left-4 right-4 bottom-4 rounded-2xl p-5 panel-surface">
+            <img src="shocked.jpeg" alt="Shocked person illustration">
+            <p class="text-[10px] font-bold tracking-[0.12em] uppercase text-slate-500 mb-1 mt-3" id="period-label">Spent today</p>
+            <p class="stamp text-3xl font-semibold text-navy mb-1" id="period-amount">&#8358;78,000</p>
+            <p class="text-sm text-slate-600" id="period-insight">45% of your money went into Groceries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM / SOLUTION -->
+  <section id="problem" class="max-w-7xl mx-auto px-6 sm:px-10 py-20">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="fade-up glass rounded-3xl p-9 sm:p-10">
+        <div class="w-11 h-11 rounded-xl bg-white/8 flex items-center justify-center mb-6">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M9 17V7m6 10v-4M4 21h16M5 21V10l7-6 7 6v11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2 class="font-sora font-bold text-2xl sm:text-[28px] mb-4 leading-snug">Your bank app shows transactions.<br/>Not the full picture.</h2>
+        <p class="text-slate-400 leading-relaxed">Knowing what you actually spent on transport, food, or subscriptions means scrolling through a long list and adding it up yourself. Most people never do it consistently.</p>
+      </div>
+      <div class="fade-up d1 rounded-3xl p-9 sm:p-10 feature-panel-outline">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brandblue to-brandgreen flex items-center justify-center mb-6">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2 class="font-sora font-bold text-2xl sm:text-[28px] mb-4 leading-snug">TrackIt closes that gap automatically.</h2>
+        <p class="text-slate-300 leading-relaxed">Log an expense in seconds.TrackIt organizes it into categories, totals, and trends, the picture is always there, without you digging for it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="max-w-7xl mx-auto px-6 sm:px-10 py-20">
+    <div class="text-center mb-14 fade-up">
+      <h2 class="font-sora font-bold text-3xl sm:text-4xl mb-3">What you get</h2>
+      <p class="text-slate-400">Three moves. That's the whole habit.</p>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="feature-card fade-up rounded-2xl p-7 glass">
+        <div class="w-12 h-12 rounded-xl bg-brandblue/15 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5c8dfa" stroke-width="2"><path d="M12 5v14m-7-7h14" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-sora font-semibold text-lg mb-2">Money moved</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Open your bank app, You buy fuel, pay for data, send someone &#8358;20,000. Money moved.</p>
+      </div>
+      <div class="feature-card fade-up d1 rounded-2xl p-7 glass">
+        <div class="w-12 h-12 rounded-xl bg-brandgreen/15 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3ddb9a" stroke-width="2"><path d="M3 3v18h18M7 15l4-5 3 3 5-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-sora font-semibold text-lg mb-2">See the full picture</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Open TrackIt, log it in. Primary vs other income, category totals, overall total, always up to date. No mental math.</p>
+      </div>
+      <div class="feature-card fade-up d2 rounded-2xl p-7 glass">
+        <div class="w-12 h-12 rounded-xl bg-brandblue/15 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5c8dfa" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-sora font-semibold text-lg mb-2">Split the bills together</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Track your expenses transparently with roommates, friends, colleagues, couples or family, and stay ahead of tax season.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section id="who" class="max-w-4xl mx-auto px-6 sm:px-10 py-20 text-center fade-up">
+    <h2 class="font-sora font-bold text-3xl sm:text-4xl mb-4">Built for anybody with an income</h2>
+    <p class="text-slate-400 max-w-xl mx-auto text-lg">Salary workers, freelancers, small business owners, and households or roommates managing shared expenses together.</p>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 pb-20 fade-up">
+    <div class="rounded-[2rem] px-8 sm:px-16 py-16 sm:py-20 text-center relative overflow-hidden cta-panel-gradient">
+      <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brandgreen/20 blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-brandblue/20 blur-3xl"></div>
+      <div class="relative">
+        <h2 class="font-sora font-bold text-4xl sm:text-5xl mb-3">Start seeing your money clearly.</h2>
+        <p class="text-slate-400 mb-7 mx-auto text-lg">Nobody wants to scroll through over 200 bank transactions. Bank statments shows payments and records, not patterns. TrackIt solves that answer.<br><br> Log it, Save it, Done. No stress.</p>
+        <a href="onboarding.html" class="btn-primary inline-block font-semibold px-9 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section id="waitlist" class="max-w-2xl mx-auto px-6 sm:px-10 pb-24 fade-up">
+    <div class="glass rounded-3xl p-8 sm:p-12 text-center">
+      <span class="stamp text-[10px] tracking-[0.15em] uppercase text-brandgreen/80">Early access</span>
+      <h2 class="font-sora font-bold text-2xl sm:text-3xl mt-3 mb-3">Join the waitlist</h2>
+      <p class="text-slate-400 mb-8 max-w-md mx-auto">Leave your email and we'll let you know the moment TrackIt is ready.</p>
+      <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        
+  <input type="email" required placeholder="you@example.com" class="flex-1 px-5 py-4 rounded-full bg-white/5 border border-white/12 text-white placeholder-slate-500"/>
+        <button type="submit" class="btn-primary font-semibold px-7 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen whitespace-nowrap">         
+          Notify me
+         
+        </button>
+      </form>
+      <p id="waitlist-confirm" class="text-brandgreen text-sm mt-4 hidden">You're on the list. We'll email you when it's ready.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="relative z-10 border-t border-white/8 py-10">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+    <span class="font-semibold text-slate-500">&copy; 2026 |<span class="font-sora font-bold text-sm bg-gradient-to-r from-brandblue to-brandgreen bg-clip-text text-transparent"> TrackIt Technologies</span></span>
+  <span class="text-brandgreen font-semibold text-xs text-slate-400">Track every expense , Gain total control</span>
+
+  </div>
+</footer>
+
+</body>
+</html>
