@@ -1,0 +1,60 @@
+* { -webkit-tap-highlight-color: transparent; }
+html, body { min-height: 100%; }
+body { background: #0B1220; overflow-x: hidden; }
+
+:root {
+  --brand-blue: #2E6FF2;
+  --brand-green: #17B978;
+}
+
+.bg-mesh {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(1000px 650px at 50% -10%, rgba(46,111,242,0.22), transparent 60%),
+    radial-gradient(800px 550px at 100% 100%, rgba(23,185,120,0.14), transparent 55%),
+    #0B1220;
+}
+
+#slides-wrapper { min-height: 520px; }
+.content-panel {
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(15, 23, 42, 0.75);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+}
+
+.slide-track { display: flex; transition: transform .45s cubic-bezier(.65,0,.35,1); }
+.slide { flex: 0 0 100%; }
+
+#choice-view {
+  background: rgba(7, 16, 30, 0.92);
+}
+
+.dot { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,0.18); transition: width .3s ease, background .3s ease; }
+.dot.active { width: 24px; background: linear-gradient(90deg, #2E6FF2, #17B978); }
+
+.btn-primary { box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 14px 30px -10px rgba(23,185,120,0.5); transition: transform .22s ease, box-shadow .22s ease; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 18px 36px -8px rgba(23,185,120,0.6); }
+.btn-primary:active { transform: translateY(0) scale(.98); }
+
+.btn-ghost { transition: border-color .22s ease, background .22s ease; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.04); }
+
+.icon-orb {
+  box-shadow: 0 30px 60px -20px rgba(46,111,242,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.icon-orb-blue {
+  background: linear-gradient(135deg, rgba(46,111,242,0.18), rgba(23,185,120,0.12));
+}
+.icon-orb-green {
+  background: linear-gradient(135deg, rgba(23,185,120,0.18), rgba(46,111,242,0.12));
+}
+.icon-orb-alt {
+  background: linear-gradient(135deg, rgba(46,111,242,0.18), rgba(23,185,120,0.18));
+}
+
+.fade-in { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+.fade-in.in { opacity: 1; transform: translateY(0); }
+
+.choice-view { transition: opacity .4s ease, transform .4s ease; }

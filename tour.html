@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="tour.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="tour.js" defer></script>
 <script>
@@ -26,38 +27,6 @@
     },
   };
 </script>
-<style>
-  * { -webkit-tap-highlight-color: transparent; }
-  body { background: #0B1220; overflow-x: hidden; }
-
-  .bg-mesh {
-    position: fixed; inset: 0; z-index: 0; pointer-events: none;
-    background:
-      radial-gradient(1000px 650px at 50% -10%, rgba(46,111,242,0.22), transparent 60%),
-      radial-gradient(800px 550px at 100% 100%, rgba(23,185,120,0.14), transparent 55%),
-      #0B1220;
-  }
-
-  .slide-track { display: flex; transition: transform .45s cubic-bezier(.65,0,.35,1); }
-  .slide { flex: 0 0 100%; }
-
-  .dot { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,0.18); transition: width .3s ease, background .3s ease; }
-  .dot.active { width: 24px; background: linear-gradient(90deg, #2E6FF2, #17B978); }
-
-  .btn-primary { box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 14px 30px -10px rgba(23,185,120,0.5); transition: transform .22s ease, box-shadow .22s ease; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 18px 36px -8px rgba(23,185,120,0.6); }
-  .btn-primary:active { transform: translateY(0) scale(.98); }
-
-  .btn-ghost { transition: border-color .22s ease, background .22s ease; }
-  .btn-ghost:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.04); }
-
-  .icon-orb { box-shadow: 0 30px 60px -20px rgba(46,111,242,0.35); }
-
-  .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
-  .fade-in.in { opacity: 1; transform: translateY(0); }
-
-  .choice-view { transition: opacity .4s ease, transform .4s ease; }
-</style>
 </head>
 <body class="font-inter text-white antialiased">
 <div class="bg-mesh"></div>
@@ -70,7 +39,7 @@
     
     <span class="bg-gradient-to-r from-brandblue via-brandblue to-brandgreen bg-clip-text text-transparent font-sora font-bold text-xl">TrackIt</span>
     </div>
-    <button id="skip-btn" onclick="goToChoice()" class="text-sm text-slate-400 hover:text-white transition">Skip</button>
+    <button id="skip-btn" class="text-sm text-slate-400 hover:text-white transition">Skip</button>
   </div>
 
   <!-- Slides -->
@@ -79,28 +48,28 @@
 
       <!-- Slide 1: The problem -->
       <div class="slide flex flex-col items-center justify-center text-center px-8">
-        <div class="icon-orb w-20 h-20 rounded-3xl flex items-center justify-center mb-10" style="background: linear-gradient(135deg, rgba(46,111,242,0.18), rgba(23,185,120,0.12)); border: 1px solid rgba(255,255,255,0.08);">
+        <div class="icon-orb icon-orb-blue w-20 h-20 rounded-3xl flex items-center justify-center mb-10">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5c8dfa" stroke-width="1.8"><circle cx="11" cy="11" r="7" stroke-linecap="round"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/><path d="M11 8v3m0 3h.01" stroke-linecap="round"/></svg>
         </div>
-        <h1 class="font-sora font-bold text-2xl sm:text-3xl leading-snug mb-4">Do you actually know where your money went this month?</h1>
+        <h1 class="font-sora font-bold text-xl sm:text-2xl tracking-wide leading-snug mb-4 mx-auto max-w-md">Do you actually know where your money went this month?</h1>
         <p class="text-slate-400 leading-relaxed max-w-xs">Most people don't, not because they're careless, or because they don't want to, but because nobody's built a fast enough way to check.</p>
       </div>
 
       <!-- Slide 2: The solution -->
       <div class="slide flex flex-col items-center justify-center text-center px-8">
-        <div class="icon-orb w-20 h-20 rounded-3xl flex items-center justify-center mb-10" style="background: linear-gradient(135deg, rgba(23,185,120,0.18), rgba(46,111,242,0.12)); border: 1px solid rgba(255,255,255,0.08);">
+        <div class="icon-orb icon-orb-green w-20 h-20 rounded-3xl flex items-center justify-center mb-10">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
   <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32l8.4-8.4Z" />
   <path d="M5.25 5.25a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3V13.5a.75.75 0 0 0-1.5 0v5.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5h5.25a.75.75 0 0 0 0-1.5H5.25Z" />
 </svg>
         </div>
-        <h1 class="font-sora font-bold text-2xl sm:text-3xl leading-snug mb-4">TrackIt helps you record every expense in one place.</h1>
-        <p class="text-slate-400 leading-relaxed max-w-xs">Free, No stress. Tap a category, type an amount, save, done. Twenty seconds and you're back to your day.</p>
+        <h1 class="font-sora font-bold text-xl sm:text-2xl tracking-wide leading-snug mb-4 mx-auto">TrackIt helps you record every expense in one place.</h1>
+        <p class="text-slate-400 leading-relaxed max-w-xs"> No stress. Tap a category, type an amount, save, done. Ten seconds and you're back to your day.</p>
       </div>
 
       <!-- Slide 3: The hook -->
       <div class="slide flex flex-col items-center justify-center text-center px-8">
-        <div class="icon-orb w-20 h-20 rounded-3xl flex items-center justify-center mb-10 max-w-md mx-auto" style="background: linear-gradient(135deg, rgba(46,111,242,0.18), rgba(23,185,120,0.18)); border: 1px solid rgba(255,255,255,0.08);">
+        <div class="icon-orb icon-orb-alt w-20 h-20 rounded-3xl flex items-center justify-center mb-10 max-w-md mx-auto">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#hook-grad)" stroke-width="1.8">
             <defs><linearGradient id="hook-grad" x1="3" y1="3" x2="21" y2="21"><stop stop-color="#5c8dfa"/><stop offset="1" stop-color="#3ddb9a"/></linearGradient></defs>
             <rect x="3" y="3" width="7" height="9" rx="1.5" stroke-linejoin="round"/>
@@ -109,7 +78,7 @@
             <rect x="3" y="16" width="7" height="5" rx="1.5" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h1 class="font-sora font-bold text-2xl sm:text-3xl leading-snug mb-4">Lawma, Groceries, Transportation, Tax, Investments, Household expenses etc, All in one dashboard, visible and transparent.</h1>
+        <h1 class="font-sora font-bold text-xl sm:text-2xl tracking-wide leading-snug mb-4 mx-auto max-w-md">Lawma, Groceries, Transportation, Tax, Investments, Household expenses, etc, All in one dashboard, visible and transparent.</h1>
         <p class="text-slate-400 leading-relaxed max-w-xs">Everything that touches your money, organized in a way that finally makes sense.</p>
       </div>
 
@@ -117,7 +86,7 @@
   </div>
 
   <!-- Dots -->
-  <div id="dots-row" class="flex items-center justify-center gap-2 py-8">
+  <div id="dots-row" class="flex items-center justify-center pt-1 gap-2 py-8">
     <span class="dot active" data-dot="0"></span>
     <span class="dot" data-dot="1"></span>
     <span class="dot" data-dot="2"></span>
@@ -125,7 +94,7 @@
 
   <!-- Bottom action -->
   <div id="bottom-action" class="px-6 pb-10 flex-row sm:flex-col sm:items-center">
-        <button id="next-btn" onclick="nextSlide()" class="btn-primary w-full font-semibold px-6 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen">
+        <button id="next-btn" class="btn-primary w-full flex flex-col semibold px-6 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen">
       Next
     </button>
 
@@ -147,7 +116,7 @@
         Log in - I have an account
       </a>
     </div>
-    <button onclick="backToSlides()" class="text-sm text-slate-500 hover:text-slate-300 transition mt-8">&larr; Back</button>
+    <button id="back-btn" class="text-sm text-slate-500 hover:text-slate-300 transition mt-8">&larr; Back</button>
   </div>
 
 </div>
