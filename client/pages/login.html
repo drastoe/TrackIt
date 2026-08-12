@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="landing.css" />
+<link rel="stylesheet" href="../css/landing.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="login.js" defer></script>
+<script src="../js/login.js" defer></script>
 <script>
   tailwind.config = {
     theme: {
@@ -33,7 +33,7 @@
 
 <div class="relative z-10 min-h-screen flex items-start md:items-center md:justify-center px-6">
   <div class="absolute top-6 left-6 hidden md:flex items-center gap-2">
-    <img src="Trackit1.png" alt="TrackIt logo" class="rounded-full h-9">
+    <img src="../assets/Trackit1.png" alt="TrackIt logo" class="rounded-full h-9">
     <span class="bg-gradient-to-r from-brandblue via-brandblue to-brandgreen bg-clip-text text-transparent font-sora font-bold text-xl">TrackIt</span>
   </div>
 
@@ -57,7 +57,7 @@
     <div class="mb-3 relative">
       <div class="flex items-center justify-between mb-1.5">
         <label class="field-label mb-0" for="password">Password</label>
-        <a href="forgot-password.html" class="text-xs text-brandgreen hover:underline">Forgot password?</a>
+        <a href="./forgotpassword.html" class="text-xs text-brandgreen hover:underline">Forgot password?</a>
       </div>
       <input id="password" name="password" type="password" class="field pr-12" placeholder="Enter your password" required />
       <span class="toggle-pass absolute right-4 top-[38px] text-slate-500 text-xs select-none" onclick="togglePassword('password', this)">Show</span>
@@ -93,7 +93,7 @@
 
   <p class="text-center text-sm text-slate-400 mt-auto pt-4">
     Don't have an account?
-    <a href="signup.html" class="text-brandgreen font-medium hover:underline">Sign up</a>
+    <a href="./signup.html" class="text-brandgreen font-medium hover:underline">Sign up</a>
   </p>
 
   </div>
