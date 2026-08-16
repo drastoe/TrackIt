@@ -18,10 +18,76 @@ function showError(input, show) {
   if (errorEl) errorEl.classList.toggle('show', show);
 }
 
+function getPasswordStrength(password) {
+  if (!password) return { level: 'empty', text: 'At least 8 characters' };
+
+  const hasUpper = /[A-Z]/.test(password);
+  const hasLower = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSymbol = /[^A-Za-z0-9]/.test(password);
+
+  const score = [hasUpper, hasLower, hasNumber, hasSymbol].filter(Boolean).length;
+
+  if (password.length >= 12 && score >= 3) {
+    return { level: 'strong', text: 'Very strong' };
+  }
+
+  if (password.length >= 8 && score >= 2) {
+    return { level: 'medium', text: 'Strong' };
+  }
+
+  return { level: 'weak', text: 'At least 8 characters' };
+}
+
 const form = document.getElementById('signup-form');
 const termsCheckbox = document.getElementById('checkbox');
 const submitButton = document.getElementById('signup-submit');
 const termsError = document.getElementById('terms-error');
+const passwordField = document.getElementById('password');
+const confirmPasswordField = document.getElementById('confirmPassword');
+const strengthBar = document.querySelector('.password-meter-bar');
+const strengthText = document.getElementById('password-strength-text');
+const confirmStatus = document.getElementById('confirm-password-status');
+
+function updatePasswordStrength() {
+  if (!passwordField || !strengthBar || !strengthText) return;
+
+  const { level, text } = getPasswordStrength(passwordField.value);
+  strengthBar.classList.remove('weak', 'medium', 'strong');
+  strengthText.classList.remove('weak', 'medium', 'strong');
+
+  if (!passwordField.value) {
+    strengthText.textContent = 'At least 8 characters';
+    return;
+  }
+
+  strengthBar.classList.add(level);
+  strengthText.classList.add(level);
+  strengthText.textContent = text;
+}
+
+function updateConfirmMatchState() {
+  if (!confirmPasswordField || !confirmStatus || !passwordField) return;
+
+  const passwordValue = passwordField.value || '';
+  const confirmValue = confirmPasswordField.value || '';
+
+  confirmStatus.classList.remove('matched', 'mismatch');
+
+  if (!confirmValue) {
+    confirmStatus.textContent = 'Type your password again';
+    return;
+  }
+
+  if (confirmValue === passwordValue && passwordValue.length >= 8) {
+    confirmStatus.textContent = 'Passwords match';
+    confirmStatus.classList.add('matched');
+    return;
+  }
+
+  confirmStatus.textContent = 'Passwords do not match';
+  confirmStatus.classList.add('mismatch');
+}
 
 function updateSubmitState() {
   if (!termsCheckbox || !submitButton) return;
@@ -32,6 +98,17 @@ function updateSubmitState() {
   if (termsError && agreed) {
     termsError.style.display = 'none';
   }
+}
+
+if (passwordField) {
+  passwordField.addEventListener('input', () => {
+    updatePasswordStrength();
+    updateConfirmMatchState();
+  });
+}
+
+if (confirmPasswordField) {
+  confirmPasswordField.addEventListener('input', updateConfirmMatchState);
 }
 
 if (termsCheckbox && submitButton) {
@@ -70,7 +147,8 @@ if (form) {
     if (!emailValid) { showError(email, true); valid = false; } else showError(email, false);
 
     const passwordValue = String(password.value || '');
-    if (passwordValue.length < 8) { showError(password, true); valid = false; } else showError(password, false);
+    const passwordIsStrong = passwordValue.length >= 8 && /[A-Z]/.test(passwordValue) && /\d/.test(passwordValue) && /[^A-Za-z0-9]/.test(passwordValue);
+    if (!passwordIsStrong) { showError(password, true); valid = false; } else showError(password, false);
 
     const confirmValue = String(confirmPassword.value || '');
     if (confirmValue !== passwordValue || !confirmValue) {

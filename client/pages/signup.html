@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/landing.css" />
+<link rel="stylesheet" href="../css/signup.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="../js/signup.js" defer></script>
 <script>
@@ -70,6 +70,10 @@
       <label class="field-label" for="password">Password</label>
       <input id="password" name="password" type="password" class="field pr-12" placeholder="At least 8 characters" required minlength="8" />
       <span class="toggle-pass absolute right-4 top-[34px] text-slate-500 text-xs select-none" onclick="togglePassword('password', this)">Show</span>
+      <div id="password-meter" class="password-meter" aria-live="polite">
+        <div class="password-meter-bar"></div>
+        <span id="password-strength-text" class="password-strength-text">At least 8 characters</span>
+      </div>
       <p class="error-text" data-error-for="password">Password must be at least 8 characters</p>
     </div>
 
@@ -77,6 +81,7 @@
       <label class="field-label" for="confirmPassword">Confirm password</label>
       <input id="confirmPassword" name="confirmPassword" type="password" class="field pr-12" placeholder="Re-enter your password" required />
       <span class="toggle-pass absolute right-4 top-[34px] text-slate-500 text-xs select-none" onclick="togglePassword('confirmPassword', this)">Show</span>
+      <p id="confirm-password-status" class="match-text">Type your password again</p>
       <p class="error-text" data-error-for="confirmPassword">Passwords don't match</p>
     </div>
 
