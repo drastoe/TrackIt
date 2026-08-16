@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/landing.css" />
+<link rel="stylesheet" href="index.css" />
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="../js/landing.js" defer></script>
+<script src="index.js" defer></script>
 <script>
   tailwind.config = {
     theme: {
@@ -37,7 +37,7 @@
 <header id="site-header" class="w-full">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-10 py-6">
     <a href="#" class="flex items-center gap-2.5">
-      <img src="../assets/Trackit1.png" alt="TrackIt Logo" class="rounded-full h-9">
+      <img src="client/assets/Trackit1.png" alt="TrackIt Logo" class="rounded-full h-9">
       <span class="bg-gradient-to-r from-brandblue via-brandblue to-brandgreen bg-clip-text text-transparent font-sora font-bold text-xl">TrackIt</span>
     </a>
     <nav class="hidden sm:flex items-center gap-10 text-sm text-slate-300 font-medium">
@@ -47,8 +47,8 @@
       <a href="#who" class="hover:text-white transition">Who is this for?</a>
     </nav>
     <div class="flex items-center gap-4">
-      <a href="/login.html" class="hidden sm:inline text-sm font-medium text-slate-300 hover:text-white transition">Log in</a>
-      <a href="/tour.html" class="nav-cta btn-primary text-sm font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-brandblue to-brandgreen sm:hidden">Take a tour</a>
+      <a href="login.html" class="hidden sm:inline text-sm font-medium text-slate-300 hover:text-white transition">Log in</a>
+      <a href="tour.html" class="nav-cta btn-primary text-sm font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-brandblue to-brandgreen sm:hidden">Take a tour</a>
     </div>
   </div>
 </header>
@@ -274,7 +274,7 @@ You don't have to get everything right. You just need to start paying attention.
           </svg>
 
           <div class="absolute left-4 right-4 bottom-4 rounded-2xl p-5 panel-surface">
-            <img src="../assets/shocked.jpeg" alt="Shocked person illustration">
+            <img src="client/assets/shocked.jpeg" alt="Shocked person illustration">
             <p class="text-[10px] font-bold tracking-[0.12em] uppercase text-slate-500 mb-1 mt-3" id="period-label">Spent today</p>
             <p class="stamp text-3xl font-semibold text-navy mb-1" id="period-amount">&#8358;78,000</p>
             <p class="text-sm text-slate-600" id="period-insight">45% of your money went into Groceries</p>
@@ -355,10 +355,11 @@ You don't have to get everything right. You just need to start paying attention.
       <div class="relative">
         <h2 class="font-sora font-bold text-4xl sm:text-5xl mb-3">Start seeing your money clearly.</h2>
         <p class="text-slate-400 mb-7 mx-auto text-lg">Nobody wants to scroll through over 200 bank transactions. Bank statments shows payments and records, not patterns. TrackIt solves that answer.<br><br> Log it, Save it, Done. No stress.</p>
-        <a href="./login.html" class="btn-primary inline-block font-semibold px-9 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen">Get Started</a>
+        <a href="login.html" class="btn-primary inline-block font-semibold px-9 py-4 rounded-full bg-gradient-to-r from-brandblue to-brandgreen">Get Started</a>
       </div>
     </div>
   </section>
+
 
 </main>
 
